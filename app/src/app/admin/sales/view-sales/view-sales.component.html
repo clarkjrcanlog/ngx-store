@@ -1,0 +1,13 @@
+<nb-card>
+    <nb-card-header><h3><span class="badge badge-warning">Sale Items</span></h3></nb-card-header>
+    <nb-card-body>
+        <h6><span class="badge badge-warning">Items:</span></h6>
+        <ul *ngFor="let sales of sale.items; let i = index;">
+          <li>{{sales.itemName}}</li>
+        </ul>
+    </nb-card-body>
+    <nb-card-footer>
+        <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+        <button nbButton status="warning" (click)="submit()">Ok</button>
+    </nb-card-footer>
+  </nb-card>

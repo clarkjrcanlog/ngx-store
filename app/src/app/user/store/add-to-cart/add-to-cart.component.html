@@ -1,0 +1,17 @@
+<nb-card>
+  <nb-card-header><h3><span class="badge badge-warning">Add to Cart</span></h3></nb-card-header>
+  <nb-card-body>
+      <h6><span class="badge badge-warning">Name: </span></h6>
+      <h4 style="margin-left: 20px;"><span class="badge badge-pill badge-warning">{{item.itemName}}</span></h4>
+      <h6><span class="badge badge-warning">Description</span></h6>
+      <h4 style="margin-left: 20px;"><span class="badge badge-pill badge-warning">{{item.itemDesc}}</span></h4>
+      <h6><span class="badge badge-warning">Price</span></h6>
+      <h4 style="margin-left: 20px;"><span class="badge badge-pill badge-warning">{{item.itemPrice}}</span></h4>
+       <br>
+      <input #cartQuantity nbInput placeholder="Quantity" class="form-control"/>
+  </nb-card-body>
+  <nb-card-footer>
+    <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+    <button nbButton status="warning" (click)="submit(cartQuantity.value)">Add to Cart</button>
+  </nb-card-footer>
+</nb-card>

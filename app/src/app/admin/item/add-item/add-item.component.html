@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header>Add Item</nb-card-header>
+  <nb-card-body>
+    <input #itemName nbInput placeholder="Item Name" class="form-control"><br>
+    <textarea rows="5" class="form-control" #itemDesc nbInput fullWidth shape="round"  placeholder="Task Description"></textarea><br>
+    <input #itemQuan nbInput placeholder="Quantity" class="form-control"><br>
+    <input #itemPrice nbInput placeholder="Price" class="form-control">
+  </nb-card-body>
+  <nb-card-footer>
+    <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+    <button nbButton status="success" (click)="submit(itemName.value, itemDesc.value, itemQuan.value, itemPrice.value)">Submit</button>
+  </nb-card-footer>
+</nb-card>

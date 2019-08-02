@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header>Edit Item</nb-card-header>
+  <nb-card-body>
+    <input nbInput [(ngModel)]="item.itemName"  class="form-control"/><br><br>
+    <textarea rows="5" [(ngModel)]="item.itemDesc" class="form-control" nbInput fullWidth shape="round"  placeholder=""></textarea><br>
+    <input #itemQuan nbInput [(ngModel)]="item.itemQuan" class="form-control"><br>
+    <input #itemPrice nbInput [(ngModel)]="item.itemPrice" class="form-control">
+  </nb-card-body>
+  <nb-card-footer>
+    <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+    <button nbButton status="success" (click)="submit()">Submit</button>
+  </nb-card-footer>
+</nb-card>

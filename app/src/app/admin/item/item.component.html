@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Items</h2>
+  <div class="float-right" id="upperBtn">
+    <button type="button" class="btn btn-info" id="addItemBtn" (click)="addItemModal()">Add Item</button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Date Created</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+        <tbody *ngFor="let item of itemsCollect; let i = index;">
+          <tr>
+            <td><input type="checkbox" name="status" style="margin-right: 5px" (change)="itemCheck(item)">{{item.itemName}}</td>
+            <td>{{item.itemDesc}}</td>
+            <td>{{item.itemQuan}}</td>
+            <td>{{item.itemPrice}}</td>
+            <td>{{item.date}}</td>
+            <td><button type="button" class="btn btn-info" (click)="editItemModal(item)">View</button> <button type="button" id="deleteBtn" (click)="deleteItem(item)" class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+    </table>
+
+    <div class="float-right" id="lwrBtn">
+      <button type="button" class="btn btn-danger" id="deleteMulti" (click)="deleteMulti()" [disabled]="itemChecker == 0">Delete Multiple</button>
+    </div>
+  </div>
+</div>

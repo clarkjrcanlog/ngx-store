@@ -1,0 +1,21 @@
+<nb-layout>
+    <nb-layout-column>
+        <div class="login-container">
+            <h3>[ CHANGE THIS ]</h3>
+            <form #f="ngForm">
+                <div class="form-control-group">
+                    <label class="label" for="input-email" placeholder="Enter username">Username</label>
+                    <input [(ngModel)]="User.username" name="username" type="text" class="form-control">
+                </div>
+                <div class="form-control-group mt-3">
+                    <label class="label" for="input-email" placeholder="Enter password">Password</label>
+                    <input [(ngModel)]="User.password" name="password" type="password" class="form-control">
+                </div>
+                <div class="form-control-group mt-3">
+                    <button (click)="Login()" class="btn btn-primary d-block">LOGIN</button>
+                </div>
+                <div style="color:red; padding:10px; font-size:12px; text-align:center; " *ngIf="message">{{message}}</div>
+            </form>
+        </div>
+    </nb-layout-column>
+</nb-layout>

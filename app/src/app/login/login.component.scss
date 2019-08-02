@@ -1,0 +1,15 @@
+.login-container{
+  width: 400px;
+  margin: 0 auto;
+  border:1px solid #dddddd50;
+  border-radius:10px;
+  padding:20px 40px 40px;
+  margin-top:30px;
+  h3{
+    font-size:18px;
+    text-transform: uppercase;
+    text-align:center;
+    letter-spacing:1px;
+  }
+  button{ width:100%; }
+}
